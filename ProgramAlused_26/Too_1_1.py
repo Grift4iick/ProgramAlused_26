@@ -1,0 +1,8 @@
+print("Tere, maailm!")
+nimi=input("Sisesta oma nimi: ")
+print(f"Tere, maailm! Tervitan sind {nimi}!")
+try:
+    vanus=int(input("Sisesta oma vanus: "))
+    print(f"Tere, maailm! Tervitan sind {nimi}! Sa oled {vanus} aastat vana.")
+except ValueError:
+    print("Palun sissesta kehtiv number vanuse jaoks.")
