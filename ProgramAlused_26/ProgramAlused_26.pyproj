@@ -21,6 +21,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="..\klassitöö 16.11.2026.py">
+      <Link>klassitöö 16.11.2026.py</Link>
+    </Compile>
     <Compile Include="ProgramAlused_26.py" />
     <Compile Include="Too_1_1.py" />
   </ItemGroup>

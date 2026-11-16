@@ -26,3 +26,13 @@ if eesnimi.upper()=="JUKU":
         print("Palun sisesta oma vanus nimbrina.")
 else:
     print("Täna kinno ei minda.")
+
+    #Klasiitöö 16.11.2026
+pinginaabrid=["Anna","Vika"]
+nimi1=input("Sisesta esimese inimise nimi: ")
+nimi2=input("Sisesta teise inimese nimi: ")
+if nimi1.isalpha() and nimi2.isalpha():
+    if nimi1.capitalize() in pinginaabrid nimi2.capitalize() in pinginaabrid:
+        print(f"{nimi1} ja {nimi2} on täna pinginaabrid.")
+    else:
+        print(f"{nimi1} ja {nimi2 ei ole täna pinginaabrid.")
