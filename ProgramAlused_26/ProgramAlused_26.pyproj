@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>26e20f6d-1eb5-430b-8284-551ea8c36ec1</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>..\klassitöö 16.11.2026.py</StartupFile>
+    <StartupFile>Töö 2.5 Antud vigase koodi parandamine (rühm 2).19.11.2026.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -26,6 +26,7 @@
     </Compile>
     <Compile Include="ProgramAlused_26.py" />
     <Compile Include="Too_1_1.py" />
+    <Compile Include="Töö 2.5 Antud vigase koodi parandamine %28rühm 2%29.19.11.2026.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
