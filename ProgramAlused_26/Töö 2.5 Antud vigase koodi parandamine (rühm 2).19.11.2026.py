@@ -17,6 +17,10 @@ try:
                 print("Arv on paarisarv")
             else:
                 print("Arv on paaritu")
+            if arv%3==0:
+                print("Arv jagub 3-ga")
+            else:
+                print("Arv ei jagu 3-ga")
         except ValueError:
             print("Viga")
     elif valik == 2:
@@ -25,18 +29,21 @@ try:
         try:
             mass=float(input("Sisesta kaal (kg) => "))
             pikkus=float(input("Sisesta pikkus (m) => "))  # oli pikkus=float(input("Sisesta pikkus (m) => ")  praegu  pikkus=float(input("Sisesta pikkus (m) => "))
-            kmi=mass/pikkus**2                              # oli kmi=mass/pikkus*2  praegu  kmi=mass/pikkus**2 
-            print("KMI:", round(kmi,1))
-            if kmi<18.5:
-                print("Alakaal")
-            elif kmi < 18.5:                                # oli >=  praegu <
-                print("Normaalkaal")
-            elif kmi > 25:                                  # oli >=  praegu <
-                print("Ülekaal")
-            elif kmi > 30:                                  # oli >=; 30  praegu > ; 30:
-                print("Rasvumine")
+            if mass <= 0 or pikkus <= 0:
+                print("Vigane kaal või pikkus")
             else:
-                print("Viga andmeds")
+                kmi=mass/pikkus**2                              # oli kmi=mass/pikkus*2  praegu  kmi=mass/pikkus**2 
+                print("KMI:", round(kmi,1))
+                if kmi<18.5:
+                    print("Alakaal")
+                elif kmi < 18.5:                                # oli >=  praegu <
+                    print("Normaalkaal")
+                elif kmi > 25:                                  # oli >=  praegu >
+                    print("Ülekaal")
+                elif kmi > 30:                                  # oli >=; 30  praegu > ; 30:
+                    print("Rasvumine")
+                else:
+                    print("Viga andmeds")
         except ValueError:
             print("Viga")
     elif valik == 3:
