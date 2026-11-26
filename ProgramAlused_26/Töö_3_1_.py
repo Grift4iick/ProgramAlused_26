@@ -1,3 +1,4 @@
+import random
 while True:
     print("""
           1. Täisarvude loendamine
@@ -11,7 +12,7 @@ while True:
             positiivsete arvude arvu,
             nullide arvu.(N väärtus sisestatakse klaviatuurilt.)
           7. Väljastada ekraanile arvud, mis on K-ga jaguvad vahemikust [A, B].""")
-    valik=input("Sisesta ülesande number (1-5) või 'q' väljumiseks: ")
+    valik=input("Sisesta ülesande number (1-31) või 'q' väljumiseks: ")
 # Ül. 1
 
     if valik == '1':
@@ -25,7 +26,7 @@ while True:
         print("Täisarve:", kogus)
 
 # 2
-    if valik == '2':
+    elif valik == '2':
         i = 0  # loendur
         kogus = 0  # naturaalarvude summa
         while i < 15:
@@ -36,7 +37,7 @@ while True:
         print("Naturaalarvude summa:", kogus)
 
 # 3
-    if valik == '3':
+    elif valik == '3':
         korutis = 1
         for i in range(0,8,1):
             arv=float(input(f"{i+1}. arv: "))
@@ -45,12 +46,12 @@ while True:
             print("korutvärtus: ",korutis)
 
 #4
-    if valik == '4':
+    elif valik == '4':
         for i in range(10, 21):
             print(f"{i}^2 on {i ** 2}")
 
 #5
-    if valik == '5':
+    elif valik == '5':
         try:
             while True:
                 N = int(input("Sisesta arv N: "))
@@ -116,13 +117,75 @@ while True:
         for i in range(A, B + 1):
             if i % K == 0:
                 print(i)
+    
+#Iseseisev töö:
+
+# 12
+    elif valik == '12':
+        n = int(input("Niidukite arv N: "))
+        m = float(input("Esimese niiduki tööaeg m (tundides): "))
+
+        kokku = 0
+        aeg = m
+        for i in range(n):
+            kokku += aeg
+            aeg += 10 / 60  # 10 minutit tundides
+        print(f"Brigaad töötas kokku {kokku:.2f} tundi")
+    
+
+# 17
+    elif valik == '17':
+        arv = int(input("Sisesta arv: "))
+
+        for i in range(1, 10):
+            print(f"{arv}*{i}={arv * i}")
+    
+
+# 22
+    elif valik == '22':
+        summa = 0
+        for i in range(100, 201):
+            if i % 17 == 0:
+                summa += i
+
+        print("17-ga jaguvate arvude summa:", summa)
+
+#28
+    elif valik =='28':
+        salajane = random.randint(1, 100)
+    katsed = 0
+    print("Arvasin ühe arvu vahemikus 1 kuni 100. Arva ära!")
+
+    while True:
+        pakkumine = int(input("Sinu pakkumine: "))
+        katsed += 1
+        if pakkumine < salajane:
+            print("Minu arv on suurem")
+        elif pakkumine > salajane:
+            print("Minu arv on väiksem")
+        else:
+            print("Õige! Arvasid ära.")
+            break
+
+    print("Katsete arv:", katsed)
+    
+
+#31
+    elif valik == '31':
+        k = int(input("Kotlettide arv K: "))
+        m = int(input("Mitu kotletti mahub pannile M: "))
+        
+        pannid= 0
+        while True:
+            if k < m:
+                break
+            k -= m
+            pannid += 1
     elif valik.lower() == 'q':
         print("Programmist väljumine")
         break
     else:
-        print("Viga: Plaun sisesta number (1-5) või 'q' väljumiseks: ")
+        print("Viga: Plaun sisesta number (1-31) või 'q' väljumiseks: ")
 
-
-        
 
     
